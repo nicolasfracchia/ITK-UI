@@ -1,0 +1,64 @@
+.textPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin:0;
+    padding: 0 7dvw;
+    margin: 0 0 74px 0;
+}
+.textPage h1{
+    font-family: var(--font-montserrat);
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color:#000000;
+    margin-top:3.75rem;
+}
+.textPage h2{
+    font-family: var(--font-montserrat);
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color:#000000;
+    margin-top:2.5rem;
+}
+.textPage p{
+    font-family: var(--font-montserrat);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color:#000000;
+    margin-top:2rem;
+}
+.textPage ul{
+    width: 100%;
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+.textPage ul li{
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-montserrat);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color:#000000;
+}
+
+
+  /* MOBILE */
+  @media only screen and (max-width: 800px) {
+    .textPage{
+        padding: 0 3rem;
+        margin-bottom: 3rem;
+    }
+    .textPage h1{
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
+    .textPage p{
+        margin-top:0;
+    }
+  }

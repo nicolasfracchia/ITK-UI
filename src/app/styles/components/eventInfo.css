@@ -1,0 +1,193 @@
+/* --------------------------------- */
+/* ------- EVENT INFORMATION ------- */
+/* --------------------------------- */
+
+section.eventInformation{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    padding:0 7dvw;
+    margin-bottom: 241px;
+}
+
+/* ROW 1: Arrow + title */
+section.eventInformation div.row-1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin: 3.1rem 0 2.5rem 0;
+}
+section.eventInformation div.row-1 a{
+    margin:0;
+    padding:0;
+    width: 1rem;
+    height: 1rem;
+    text-decoration:none;
+}
+section.eventInformation div.row-1 a img{
+    width: 1rem;
+    height: 1rem;
+}
+section.eventInformation div.row-1 h1{
+    margin: 0 0 0 1rem;
+    padding:0;
+    flex-grow: 1;
+    font-family: var(--font-montserrat);
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #151515;
+    line-height: 3rem;
+}
+
+/* ROW 2: Image + map */
+section.eventInformation div.row-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0 0 2.5rem 0;
+}
+section.eventInformation div.row-2 img{
+    width: 59%;
+    height: auto;
+}
+section.eventInformation div.row-2 iframe{
+    border:none;
+    width: 40%;
+    height: 427px;
+    border-radius: 12px;
+}
+
+/* ROW 3: Details list */
+section.eventInformation div.row-3{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 35%;
+}
+section.eventInformation div.row-3 h2{
+    margin: 0 0 2rem 0;
+    padding: 0;
+    font-family: var(--font-montserrat);
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color:#151515;
+}
+section.eventInformation div.row-3 h3{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-montserrat);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color:#151515;
+}
+section.eventInformation div.row-3 p{
+    margin: 0 0 1rem 0;
+    padding: 0;
+    font-family: var(--font-montserrat);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color:#151515;
+}
+section.eventInformation div.row-3 ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin:0 0 3.5rem 0;
+    padding:0;
+    list-style: none;
+}
+section.eventInformation div.row-3 ul li{
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+section.eventInformation div.row-3 label{
+    margin: 0 0 0 0;
+    padding: .5rem 0 .5rem 2rem;
+    font-family: var(--font-montserrat);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color:#151515;
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+}
+section.eventInformation div.row-3 label.speaker{background-image: url('/images/icons/speaker-gray.svg');}
+section.eventInformation div.row-3 label.date{background-image: url('/images/icons/calendar-gray.svg');}
+section.eventInformation div.row-3 label.time{background-image: url('/images/icons/clock-gray.svg');}
+section.eventInformation div.row-3 label.location{background-image: url('/images/icons/location-gray.svg');}
+section.eventInformation div.row-3 label.admission{color: #E42020;}
+section.eventInformation div.row-3 a{
+    text-decoration: none;
+    width: fit-content;
+    padding: 1rem 6.6rem;
+    font-family: var(--font-sarabun);
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color:#FFFFFF;
+    border-radius: 10px;
+    border: 1px solid #00BFFF;
+    background: #007BFF;
+    margin:3.5rem 0 0 0;
+}
+
+
+  /* MOBILE */
+  @media only screen and (max-width: 800px) {
+    section.eventInformation{
+        padding: 0 3rem;
+        margin-bottom: 3rem;
+    }
+    section.eventInformation div.row-1,
+    section.eventInformation div.row-2{
+        flex-direction: column;
+        margin: 0 0 1rem 0;
+    }
+    section.eventInformation div.row-1 h1{
+        width: 100%;
+        font-size: 1.5rem;
+    }
+    section.eventInformation div.row-1 a{
+        width: 100%;
+        height: 2rem;
+    }
+    section.eventInformation div.row-1 a img{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    section.eventInformation div.row-2 img{
+        width: 100%;
+    }
+    section.eventInformation div.row-2 iframe{
+        width: 100%;
+        height: 200px;
+        margin-top: 1rem;
+    }
+    section.eventInformation div.row-3{
+        width: 100%;
+    }
+    section.eventInformation div.row-3 h2{
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    section.eventInformation div.row-3 h3,
+    section.eventInformation div.row-3 p,
+    section.eventInformation div.row-3 label{
+        font-size: .75rem;
+    }
+    section.eventInformation div.row-3 ul{
+        margin-bottom: 1rem;
+    }
+    section.eventInformation div.row-3 a{
+        font-size: 1rem;
+        margin: 1rem auto;
+    }
+  }

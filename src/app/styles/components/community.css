@@ -1,0 +1,110 @@
+/* ------------------------- */
+/* ------- COMMUNITY ------- */
+/* ------------------------- */
+
+section.community{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 75px 7dvw;
+}
+section.community div.col1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 34dvw;
+}
+section.community div.col1 h2{
+    width: 100%;
+    font-size:2.5rem;
+    line-height: 4.6rem;
+    margin:0;
+    padding:0;
+    text-align: left;
+}
+section.community div.col1 p{
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    margin:3rem 0;
+    padding:0;
+}
+section.community div.col1 ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+    margin:0;
+    padding: 2.6rem 0 0 0;
+    list-style: none;
+}
+section.community div.col1 ul li{
+    font-size: 1.5rem;
+    width:fit-content;
+    padding:0;
+    margin: 0 0 1.6rem 0;
+}
+section.community div.col1 ul li img{
+    margin-right: 10px;
+}
+section.community div.col1 a{
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color:#FFFFFF;
+    background-color: var(--btn-blue-bkg);
+    padding:1rem 4rem;
+    border-radius:10px;
+}
+
+section.community div.col2 img{
+    border-radius: 10px;
+    width: 45dvw;
+    height: auto;
+}
+
+
+  /* MOBILE */
+  @media only screen and (max-width: 800px) {
+    section.community{
+        flex-direction: column;
+        padding: 75px 0;
+    }
+    section.community div.col1,
+    section.community div.col2,
+    section.community div.col1 ul,
+    section.community div.col2 img{
+        width: 100%;
+    }
+    section.community div.col1{
+        padding: 1rem 3rem;
+    }
+    section.community div.col1 h2{
+        font-size: 1.125rem;
+        text-align: center;
+    }
+    section.community div.col1 p{
+        font-size: 1rem;
+        text-align: center;
+    }
+    section.community div.col1 ul li{
+        font-size: 1rem;
+        margin: 0 auto 1.6rem auto;
+    }
+    section.community div.col1 a{
+        margin: 0 auto;
+    }
+    section.community div.col2{
+        margin-top: 44px;
+    }
+    section.community div.col2 img{
+        border-radius: 0px;
+    }
+  }
+
+

@@ -1,0 +1,133 @@
+:root {
+    --comments-space: 7dvh;
+}
+
+/* ------------------------ */
+/* ------- COMMENTS ------- */
+/* ------------------------ */
+section.comments div.comments-container div.comment {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    padding-top: var(--comments-space);
+    padding-bottom: 0;
+    z-index: 1;
+    margin-top: -5dvh;
+    transition: .3s;
+}
+
+section.comments div.comments-container div.comment:hover {
+    scale: 1.05;
+}
+
+section.comments div.comments-container div.comment:nth-child(even) {
+    padding-top: 0;
+    padding-bottom: var(--comments-space);
+}
+
+section.comments div.comments-container-odd div.comment:last-child {
+    margin: -5dvh auto 0 auto;
+}
+
+section.comments div.comments-container div.fade-out {
+    opacity: 0;
+}
+
+section.comments div.comments-container div.comment div.photo {
+    width: 5dvw;
+    height: 5dvw;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+    margin-left: 1dvw;
+    z-index: 1;
+}
+
+section.comments div.comments-container div.comment div.text {
+    background-image: url('/images/comments/comment-bkg.png');
+    background-repeat: no-repeat;
+    background-position: right 2dvw center;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 3dvw 2dvw 2dvw 2dvw;
+    margin-top: -2dvw;
+    z-index: 0;
+    box-shadow: -8px 0px 33.3px -5px #DEE1F180;
+    position: relative;
+}
+
+section.comments div.comments-container div.comment div.text:after {
+    content: '';
+    background-color: transparent;
+    z-index: -100;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 10px;
+    box-shadow: 21px 40px 41.6px -27px #DEE1F180;
+}
+
+section.comments div.comments-container div.comment div.text label {
+    font-weight: 700;
+    padding-right: 1dvw;
+    font-size: 1.5rem;
+}
+
+section.comments div.comments-container div.comment div.text span {
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+section.comments div.comments-container div.comment div.text p {
+    width: 100%;
+    text-align: left;
+    line-height: 1.75rem;
+}
+
+
+
+
+
+/* MOBILE */
+@media only screen and (max-width: 800px) {
+    section.comments {
+        padding-bottom: 130px;
+    }
+
+    section.comments div.comments-container div.comment {
+        width: 100%;
+    }
+
+    section.comments div.comments-container div.comment {
+        align-items: center;
+    }
+
+    section.comments div.comments-container div.comment,
+    section.comments div.comments-container div.comment:nth-child(even) {
+        margin: 1rem 0 0 0;
+        padding: 1rem 0 0 0;
+    }
+
+    section.comments div.comments-container div.comment div.photo {
+        width: 4.5rem;
+        height: 4.5rem;
+        margin: 0;
+    }
+
+    section.comments div.comments-container div.comment div.text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 3.25rem;
+        margin-top: -2.25rem;
+    }
+
+    section.comments div.comments-container div.comment div.text label,
+    section.comments div.comments-container div.comment div.text span,
+    section.comments div.comments-container div.comment div.text p {
+        font-size: 1rem;
+    }
+}

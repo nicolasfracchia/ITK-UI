@@ -1,0 +1,228 @@
+/** ---------------------- **/
+/** ------- FOOTER ------- **/
+/** ---------------------- **/
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--footer-bkg);
+    padding: 0 7dvw;
+    color: #FFFFFF;
+  }
+  /* Newsletter */
+  footer div.newsletter-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0;
+    margin: 02rem 0 0 0;
+  }
+  footer div.newsletter-container div:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35dvw;
+  }
+  footer div.newsletter-container div:last-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31dvw;
+  }
+  footer div.newsletter-container div h3{
+    font-size: 1.5rem;
+    padding:0;
+    margin:0;
+  }
+  footer div.newsletter-container div p{
+    font-size:1rem;
+    margin: 0;
+    padding:0;
+  }
+  footer div.newsletter-container div h3.successMessage{
+    text-align: center;
+    color: #15B097;
+    box-shadow: 0px 0px 5px 0px white;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  footer div.newsletter-container div form{
+    position: relative;
+    display: flex;
+    width: 100%;
+  }
+  footer div.newsletter-container div form div#newsletterFormSpaced{
+    position: absolute;
+    width: 0;
+    height: 0;
+    top:calc(var(--header-height-neg) * 1.2) ;
+  }
+  footer div.newsletter-container div form input{
+    border:none;
+    font-size: 1rem;
+    padding: 1.5rem;
+    margin: 0 2px;
+    background-color: var(--bkg-light);
+    flex-grow: 1;
+    transition: .3s;
+  }
+  footer div.newsletter-container div form input.highlighted{
+    box-shadow: 0px 0px 10px 8px var(--btn-blue-bkg);
+    scale: 1.05;
+  }
+  footer div.newsletter-container div form div[data-slot=error-message]{
+    position: absolute;
+    color:red;
+  }
+  /*
+  footer div.newsletter-container div form div[data-slot=description]{
+    position: absolute;
+    color:#15B097;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  */
+  footer div.newsletter-container div form button{
+    border: none;
+    font-size: 1rem;
+    background-color: var(--btn-blue-bkg);
+    color: #FFFFFF;
+    padding: 1.5rem;
+    margin-left: .3rem;
+    transition: .3s;
+  }
+  footer div.newsletter-container div form button:disabled{
+    background-color: #9F9C9C;
+    cursor: not-allowed;
+  }
+  /* Navigation */
+  footer div.nav-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: solid 1px #FFFFFF;
+    border-bottom: solid 1px #FFFFFF;
+    padding: 2.2rem 0 5.2rem 0;
+    margin: 2.2rem 0 2.5rem 0;
+  }
+  footer div.nav-container div h3{
+    padding-top: var(--site-space-vertical);
+    font-size: 1rem;
+    font-weight:700;
+    margin: 0;
+  }
+  footer div.nav-container div ul{
+    margin: 0;
+    padding:0;
+    list-style: none;
+  }
+  footer div.nav-container div ul li{
+    padding: 1.5rem 0 0 0;
+  }
+  footer div.nav-container div ul li a{
+    width: fit-content;
+    text-decoration: none;
+    font-size:1rem;
+    color:#FFFFFF;
+    font-weight: 400;
+  }
+  footer div.nav-container div.social-container ul{
+    display: flex;
+    margin: 1.5rem 0 0 0;
+    padding:0;
+    list-style: none;
+  }
+  footer div.nav-container div.social-container ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:6px;
+    background: #81BEFF;
+    padding: .6rem;
+    margin-right: .6rem;
+  }
+  footer div.nav-container div.social-container ul li:last-child{
+    margin-right: 0;
+  }
+  footer div.nav-container div.social-container ul li a{
+    text-decoration:none;
+    width:1rem;
+    height:1rem;
+    margin:0;
+    padding:0;
+  }
+  footer div.nav-container div.social-container ul li a img{
+    width:1rem;
+    height:1rem;
+    margin:0;
+    padding:0;
+  }
+  /* Copyright */
+  footer div.copyright-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 0 0 2.5rem 0;
+    margin: 0;
+  }
+  footer div.copyright-container p{
+    font-size: 1rem;
+    margin:0;
+    padding:0;
+  }
+  footer div.copyright-container p span:first-child{
+    font-size: 2rem;
+    vertical-align: middle;
+  }
+  footer div.copyright-container p a{
+    width: fit-content;
+    text-decoration: none;
+    color:#FFFFFF;
+    background-color: #81BEFF;
+    border-radius: 4px;
+    padding:.6rem;
+    margin-left: .8rem;
+  }
+  
+
+  /* MOBILE */
+@media only screen and (max-width: 800px) {
+  footer div.newsletter-container,
+  footer div.newsletter-container div form,
+  footer div.nav-container{
+    flex-direction: column;
+  }
+  footer div.newsletter-container div:first-child,
+  footer div.newsletter-container div:last-child,
+  footer div.nav-container div{
+    width: 100%;
+  }
+  footer div.newsletter-container div h3,
+  footer div.newsletter-container div p,
+  footer div.nav-container div ul{
+    margin-bottom: 1.5rem;
+  }
+  footer div.newsletter-container div form input,
+  footer div.newsletter-container div form button{
+    margin: 0 0 1rem 0;
+  }
+  footer div.nav-container div.social-container ul{
+    width: 100%;
+    justify-content: space-between;
+  }
+  footer div.nav-container div.social-container ul li a,
+  footer div.nav-container div.social-container ul li a img {
+    width: 2rem;
+    height: 2rem;
+  }
+  footer div.copyright-container p{
+    font-size: .75rem;
+  }
+  footer div.newsletter-container div form div#newsletterFormSpaced{
+    top:calc(var(--header-height-mobile-neg) * 1.2) ;
+  }
+}

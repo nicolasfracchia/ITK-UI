@@ -1,0 +1,62 @@
+/** ---------------------- **/
+/** ------- GLOBAL ------- **/
+/** ---------------------- **/
+
+:root {
+  --header-height: 8.75rem;
+  --header-height-neg: -8.75rem;
+  --header-height-mobile:5.75rem;
+  --header-height-mobile-neg:-5.75rem;
+  --cobalt-blue: #4362BE;
+  --btn-blue-bkg: #007BFF;
+
+  --btn-black-bkg: #0A0A0B;
+  --txt-black: #151515;
+  --input-border-color: #4362BE;
+  --bkg-light: #FFFFFF; /* DELETE THIS ONE! */
+  --footer-bkg: #1E2A38;
+  --btn-lightblue-bkg: #81BEFF;
+  --site-space: 3dvh 7dvw;
+  --site-space-horizontal: 7dvw;
+  --site-space-vertical: 3dvh;
+}
+
+html,body{
+  margin:0;
+  padding:0;
+  min-width:100%;
+  min-height:100%;
+  scroll-behavior: smooth;
+}
+body{
+  padding-top:var(--header-height);
+}
+*{
+  box-sizing:border-box;
+  font-family: var(--font-montserrat);
+}
+button,input,textarea,select{
+  font-family: var(--font-sarabun);
+}
+input:focus{
+  outline: none;
+}
+button{
+  cursor: pointer;
+  border:none;
+}
+#events-horizontal-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width:100%;
+  padding:30px;
+}
+
+
+/* MOBILE */
+@media only screen and (max-width: 800px) {
+  #events-horizontal-container{
+    padding: 2rem 3rem;
+  }
+}

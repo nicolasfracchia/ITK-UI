@@ -1,0 +1,186 @@
+/* ---------------------------------- */
+/* ------- CARDS | HORIZONTAL ------- */
+/* ---------------------------------- */
+a{
+    display: flex;
+    width: 49.6%;
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    transition: .3s;
+}
+a:hover{
+    scale:1.01;
+}
+article.cardHorizontal{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom:solid 1px #000000;
+    border-radius:10px;
+    background-color: #FFFFFF;
+    padding:35px 41px;
+    box-shadow: 19px 4px 9.1px 0px #F5F5F540;
+}
+article.cardHorizontal div.img{
+    width:40.5%;
+    background-size: cover;
+    background-position: center center;
+}
+article.cardHorizontal div.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+    padding-left: .75rem;
+}
+article.cardHorizontal div.content h4{
+    margin: 0;
+    padding: 0;
+    font-size:1.5rem;
+    line-height: 2rem;
+    font-family: var(--font-sarabun);
+    color:#151515;
+    font-weight:400;
+}
+article.cardHorizontal div.content div.name{
+    margin-top:1.25rem;
+}
+article.cardHorizontal div.content div.name h3{
+    margin:0;
+    padding:0;
+    font-family: var(--font-sarabun);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color:#151515;
+}
+article.cardHorizontal div.content div.name p{
+    margin:0;
+    padding:0;
+    font-family: var(--font-sarabun);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color:#151515;
+}
+article.cardHorizontal div.content ul{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.25rem 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+article.cardHorizontal div.content ul li{
+    width: fit-content;
+    padding:0;
+    margin:0;
+}
+article.cardHorizontal div.content ul li label{
+    margin:0;
+    padding:0;
+    font-family: var(--font-sarabun);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color:#151515;
+}
+article.cardHorizontal div.content ul li p{
+    margin:0;
+    padding:0;
+    font-family: var(--font-sarabun);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color:#151515;
+}
+article.cardHorizontal div.content ul li.categories{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+}
+article.cardHorizontal div.content ul li.categories span{
+    background: #EFEDED;
+    padding: 2px 9px;
+    border-radius:5px;
+    font-family: var(--font-sarabun);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin-left: 1rem;
+}
+article.cardHorizontal div.content div.location{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #DFEFFF;
+    padding: 4px 9px;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin-top: 3rem;
+}
+article.cardHorizontal div.content div.location label{
+    background-image: url('/images/icons/location-black.svg');
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: .75rem;
+    padding-left: 1.25rem;
+    font-family: var(--font-sarabun);
+    color:#151515;
+}
+article.cardHorizontal div.content div.location span{
+    font-family: var(--font-sarabun);
+    color:#E51414;
+}
+
+
+  /* MOBILE */
+  @media only screen and (max-width: 800px) {
+    a{
+        width: 100%;
+    }
+    article.cardHorizontal{
+        flex-direction: column;
+        padding: 0;
+        overflow: hidden;
+    }
+    article.cardHorizontal div.img{
+        width: 100%;
+        height: 200px;
+    }
+    article.cardHorizontal div.content{
+        padding: 1rem;
+    }
+    article.cardHorizontal div.content h4{
+        font-size: 1rem;
+    }
+    article.cardHorizontal div.content div.name h3,
+    article.cardHorizontal div.content div.name p,
+    article.cardHorizontal div.content ul li label,
+    article.cardHorizontal div.content ul li p,
+    article.cardHorizontal div.content ul li.categories span,
+    article.cardHorizontal div.content div.location label,
+    article.cardHorizontal div.content div.location span{
+        font-size: .75rem;
+    }
+    article.cardHorizontal div.content ul{
+        flex-direction: column;
+    }
+    article.cardHorizontal div.content ul li{
+        width: 100%;
+    }
+    article.cardHorizontal div.content ul li.categories{
+        padding-top: 1rem;
+        justify-content: space-evenly;
+    }
+    article.cardHorizontal div.content div.name,
+    article.cardHorizontal div.content ul,
+    article.cardHorizontal div.content div.location{
+        margin-top: 1rem;
+    }
+  }

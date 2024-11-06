@@ -1,0 +1,242 @@
+/** ---------------------- **/
+/** ------- HEADER ------- **/
+/** ---------------------- **/
+
+:root{
+  --input-border-radius: 10px;
+}
+
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    background-color: #FFFFFF;
+    box-shadow: -6px 10px 50px -2px #BADBFF;
+    z-index: 10;
+  }
+  header .onlyMobile{
+    display: none;
+  }
+  header div.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: var(--header-height);
+    padding: 3dvh 3.5dvw 3dvh 7dvw;
+  }
+  header div img{
+    width: 5.1rem;
+    height: 3.25rem;
+    margin-right:3.75dvw;
+  }
+  header form{
+    display: flex;
+    justify-content: space-between;
+    /* width: 29rem; /* width with location field */
+    width: 17.5rem;
+    margin-right:3.5dvw;
+  }
+  header form div.headerInputContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+  }
+  header form div.headerInputContainer div[data-slot=inner-wrapper]:has(input#inputSearchHeader){
+    background: linear-gradient(90deg, #4362BE 0%, #9248FB 100%);
+    border-radius:var(--input-border-radius);
+    border:0;
+    padding:1px;
+  }
+  header form div.headerInputContainer div[data-slot=error-message]{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: red;
+  }
+
+  header form div.headerInputContainer input{
+    border-radius:var(--input-border-radius);
+    border: 0;
+    padding: 1rem 1rem 1rem 2.25rem;
+    margin:0;
+    font-size: .75rem;
+    color: #4362BE;
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+    background-position: center left 1rem;
+    background-size: 1rem;
+  }
+  header form div.headerInputContainer input:focus {
+    outline: none;
+  }
+  header form div.headerInputContainer input::placeholder{
+    color: #4362BE80;
+  }
+  header form div.headerInputContainer input#inputSearchHeader{
+    width: 14rem;
+    background-image: url('/images/icons/search-gray.svg');
+  }
+  header form div.headerInputContainer input#inputLocationHeader{
+    width: 11rem;
+    background-image: url('/images/icons/location-blue.svg');
+  }
+  header form button{
+    width: 3rem;
+    border-radius:10px;
+    padding: 1rem;
+    font-size:.75rem;
+    background-color: #151515;
+    background-image: url('/images/icons/search-white.svg');
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position: center center;
+    transition: .3s;
+  }
+  header form button:hover{
+    background-color: var(--cobalt-blue);
+    border-color: var(--cobalt-blue);
+  }
+  header nav{
+    flex-grow: 1;
+    margin-right:3.5dvw;
+  }
+  header nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin:0;
+    padding:0;
+  }
+  header nav ul li{
+    position:relative;
+    padding: .5rem;
+  }
+  header nav ul li:first-child{
+    padding-left: 0;
+  }
+  header nav ul li:last-child{
+    padding-right: 0;
+  }
+  header nav ul li a{
+    position:relative;
+    width: fit-content;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #151515;
+    transition: .3s;
+  }
+  header nav ul li a:after{
+    content: '';
+    position: absolute;
+    background: var(--cobalt-blue);
+    height: 1px;
+    width: 0;
+    left: 0;
+    bottom: -.3rem;
+    transition: .3s;
+  }
+  header nav ul li a:hover{
+    color: var(--cobalt-blue);
+  }
+  header nav ul li a:hover:after{
+    width: 100%;
+  }
+  header nav ul li a.button{
+    font-family: var(--font-montserrat);
+    font-size: 1rem;
+    border-radius:10px;
+    background-color: #0A0A0B;
+    padding: 1rem;
+    color:#FFFFFF;
+    transition: .3s;
+  }
+  header nav ul li a.button:hover{
+    background-color: var(--cobalt-blue);
+    border-color: var(--cobalt-blue);
+  }
+  header nav ul li a.button:hover:after{
+    width: 0;
+  }
+
+  /* MOBILE */
+  @media only screen and (max-width: 800px) {
+    header .onlyMobile{
+      display:inline-block;
+    }
+    header{
+      bottom:0;
+      height: var(--header-height-mobile);
+      overflow: hidden;
+      transition: .3s;
+    }
+    header div.headerContainer{
+      height: fit-content;
+      padding:1rem 3rem;
+    }
+    header form,
+    header nav ul{
+      flex-wrap: wrap;
+      margin-top:3rem;
+    }
+    header form,
+    header nav{
+      margin-right: 0;
+    }
+    header form,
+    header form div.headerInputContainer,
+    header form div.headerInputContainer input#inputSearchHeader,
+    header form button,
+    header nav,
+    header nav ul,
+    header nav ul li,
+    header nav ul li a{
+      width: 100%;
+    }
+    header button.toggleMenu{
+      background: none;
+    }
+    header button.toggleMenu,
+    header button.toggleMenu img{
+      margin:0;
+      padding:0;
+      height: 2rem;
+      width: auto;
+    }
+    header form div.headerInputContainer input{
+      font-size: 2rem;
+      background-size: 2rem;
+      padding-left: 3.25rem;
+    }
+    header form button{
+      padding: 2.25rem 0;
+      background-size: 2rem;
+      margin-top: .5rem;
+    }
+    header nav ul li{
+      text-align: center;
+      height: fit-content;
+      padding: 2rem 0;
+    }
+    header nav ul li a.button{
+      display: inline-block;
+      padding: .25rem 0;
+      width: 100%;
+    }
+    header nav ul li a,
+    header nav ul li a.button{
+      font-size: 2.5rem;
+    }
+
+    header.menuOpen{
+      height: 100dvh;
+      overflow: scroll;
+    }
+  }

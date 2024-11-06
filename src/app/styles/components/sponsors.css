@@ -1,0 +1,27 @@
+/** ------------------------ **/
+/** ------- SPONSORS ------- **/
+/** ------------------------ **/
+#sponsors-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--footer-bkg);
+    padding:var(--site-space-vertical) 1dvw;
+    border-bottom:solid 1dvh white;
+  }
+  #sponsors-container img{
+    width:auto;
+    height:5dvh;
+  }
+
+  /* MOBILE */
+  @media only screen and (max-width: 800px) {
+    #sponsors-container{
+      flex-wrap: wrap;
+    }
+    #sponsors-container img{
+      height: 3dvh;
+      margin:1rem;
+    }
+  }

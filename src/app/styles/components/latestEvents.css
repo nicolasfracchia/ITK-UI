@@ -1,0 +1,74 @@
+/* ----------------------------- */
+/* ------- LATEST EVENTS ------- */
+/* ----------------------------- */
+
+section.latestEvents{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    padding: 1.4rem 0;
+}
+section.latestEvents div#latestEventsSectionSpaced{
+    position: absolute;
+    width: 0;
+    height: 0;
+    top:calc(var(--header-height-neg) * 1.2) ;
+}
+section.latestEvents h2{
+    margin: 0 0 0 7dvw;
+    padding: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #151515;
+    text-align: left;
+}
+section.latestEvents a{
+    width: fit-content;
+    margin: 0 7dvw 0 0;
+    padding: 0;
+    font-size: 1.5rem;
+    text-align: right;
+    text-decoration: none;
+    color: #151515;
+    font-weight: 600;
+}
+section.latestEvents div.latestEvents-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 22px 41px 42.6px 7dvw;
+    overflow: hidden;
+}
+section.latestEvents div.latestEvents-container div.slider-container{
+    display: flex;
+}
+
+
+  /* MOBILE */
+  @media only screen and (max-width: 800px) {
+    section.latestEvents{
+        position: relative;
+        padding-bottom: 3rem;
+    }
+    section.latestEvents div.latestEvents-container{
+        padding:1rem 3rem;
+    }
+    section.latestEvents h2{
+        width: 100%;
+        text-align: center;
+        font-size: 1.125rem;
+    }
+    section.latestEvents a{
+        font-size: .75rem;
+        position: absolute;
+        bottom: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+    section.latestEvents div#latestEventsSectionSpaced{
+        top:calc(var(--header-height-mobile-neg) * 1.2) ;
+    }
+  }

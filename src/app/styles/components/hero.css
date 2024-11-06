@@ -1,0 +1,147 @@
+/* -------------------- */
+/* ------- HERO ------- */
+/* -------------------- */
+
+section.hero{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 107px 7dvw;
+}
+section.hero:after{
+    content:'';
+    position:absolute;
+    top:0;
+    left:calc(7dvw + 40rem);
+    right:0;
+    bottom: 0;
+    background-image: url('/images/hero/hero0.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    z-index: -1;
+}
+section.hero div.hero-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 42.3rem;
+    border-radius:3px;
+}
+section.hero div.hero-content h1{
+    margin:0 0 1.5rem 0;
+    padding:0;
+    font-size: 5.6rem;
+    font-weight: 700;
+    background: #03264B;
+    background: linear-gradient(to right, #03264B 0%, #692DD7 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+section.hero div.hero-content h2{
+    margin:0;
+    padding:0;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+section.hero div.hero-content h2 span{
+    color:var(--btn-lightblue-bkg);
+}
+section.hero div.hero-content div.call-to-action{
+    margin-top: 2.56rem;
+}
+/*
+    THIS ADDS THE WHITE BACKGROUND WITH SHADOW FOR MANY BUTTOS
+section.hero div.hero-content div.call-to-action{
+    position:relative;
+    padding: 2.8rem 3.3rem;
+    background-color: #FFFFFF;
+    box-shadow: 21px 40px 41.6px -27px #007BFF33;
+    margin-top: 2.56rem;
+}
+section.hero div.hero-content div.call-to-action:before{
+    content: '';
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    box-shadow: -8px 0px 33.3px -5px #007BFF33;
+}
+*/
+section.hero div.hero-content div.call-to-action a{
+    position: relative;
+    width:fit-content;
+    text-decoration: none;
+    font-size:1.5rem;
+    background-color: var(--btn-blue-bkg);
+    color: #FFFFFF;
+    border-radius:10px;
+    padding: 1rem 2.75rem;
+}
+/*
+section.hero div.hero-image{
+    background-image: url('/images/hero/hero0.jpg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+}
+    */
+
+
+/* MOBILE */
+@media only screen and (max-width: 800px) {
+    section.hero{
+        padding: 0;
+    }
+    section.hero:after{
+        left:0;
+        background-size: 100%;
+    }
+    section.hero div.hero-content{
+        width:100%;
+    }
+    section.hero div.hero-content h1{
+        position: relative;
+        margin: 0;
+        padding: 0 3rem;
+        font-size: 2rem;
+        text-align: center;
+        background: #FFFFFF;
+        color: transparent;
+    }
+    section.hero div.hero-content h1:after{
+        content:'DISCOVER & ATTEND!';
+        position: absolute;
+        padding: 0 3rem;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        background: #03264B;
+        background: linear-gradient(to right, #03264B 0%, #692DD7 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    section.hero div.hero-content h2{
+        margin: 0;
+        font-size: 1rem;
+        text-align: center;
+        padding: 1rem 3rem;
+        background-color: #FFFFFF;
+        margin-top: -1px;
+    }
+    section.hero div.hero-content div.call-to-action{
+        margin: 250px auto 0 auto;
+        padding: 15px 66px;
+    }
+    section.hero div.hero-content div.call-to-action button{
+        width: 100%;
+        padding: 18px;
+        font-size: 1rem;
+    }
+}
